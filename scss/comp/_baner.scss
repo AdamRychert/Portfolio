@@ -1,0 +1,9 @@
+.baner{
+    height: 50vh;
+    margin: 10vh 0;
+    display: flex;
+    justify-content: center;
+    &__img{
+        height: 100%;
+    }   
+}
