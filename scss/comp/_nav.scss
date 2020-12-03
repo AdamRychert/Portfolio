@@ -1,14 +1,15 @@
-.site-header{
-    height: auto;
-}
+
 .nav{
-    height: 12vh;
+    // height: 12vh;
     width: 100%;
-    padding-top:5vh;
-    margin-bottom: 10vh;
+    margin-top:5vh;
     &__list{
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
+        
+    }
+    &__item:hover{
+        border-bottom: 0.2rem solid rgb(43, 255, 0);
     }
 }

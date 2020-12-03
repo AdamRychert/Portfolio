@@ -1,0 +1,14 @@
+.footer{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    background-color: rgba(0, 255, 55, 0.575);
+    height: 35vh;
+}
+.contact{
+    display: flex;
+    width: 90vw;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}

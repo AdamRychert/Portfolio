@@ -1,5 +1,7 @@
 @import "comp/nav";
 @import "comp/baner";
+@import "comp/footer";
+@import "comp/icon-bar";
 
 *{
     margin: 0;
@@ -9,8 +11,6 @@
 body{
     display: flex;
     flex-flow: column wrap;
-    // align-content: center;
-    margin: 0 10vw;
     font-size: 20px;
 }
 a{
@@ -20,6 +20,30 @@ a{
 li{
     list-style: none;
 }
+.common-style{
+    margin-bottom: 10vh;
+    padding: 0 10vw;
+}
+.main{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
 .site-header{
     height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    &__h1{
+        padding-bottom: 1.5rem;
+        font-size: 2rem;
+    }
+    &__img{
+        height: 17vh;
+    }
+    &__autor{
+        color:rgb(43, 43, 46);
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
+    }
 }

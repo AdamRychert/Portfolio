@@ -1,12 +1,6 @@
-.site-header {
-  height: auto;
-}
-
 .nav {
-  height: 12vh;
   width: 100%;
-  padding-top: 5vh;
-  margin-bottom: 10vh;
+  margin-top: 5vh;
 }
 
 .nav__list {
@@ -22,9 +16,13 @@
           justify-content: space-between;
 }
 
+.nav__item:hover {
+  border-bottom: 0.2rem solid #2bff00;
+}
+
 .baner {
   height: 50vh;
-  margin: 10vh 0;
+  min-height: 13rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,6 +33,63 @@
 
 .baner__img {
   height: 100%;
+  border-bottom: 0.1rem solid green;
+  padding: 0 10vw;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: rgba(0, 255, 55, 0.575);
+  height: 35vh;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.icon-bar__container {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.icon-bar__container:nth-child(1) {
+  background-image: url(/assets/fb.svg);
+}
+
+.icon-bar__container:nth-child(2) {
+  background-image: url(/assets/1ins.svg);
+}
+
+.icon-bar__container:nth-child(3) {
+  background-image: url(/assets/mail-nocolor.svg);
+}
+
+.icon-bar__container:hover {
+  height: 3.5rem;
+  width: 3.5rem;
 }
 
 * {
@@ -52,7 +107,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  margin: 0 10vw;
   font-size: 20px;
 }
 
@@ -65,7 +119,50 @@ li {
   list-style: none;
 }
 
+.common-style {
+  margin-bottom: 10vh;
+  padding: 0 10vw;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .site-header {
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.site-header__h1 {
+  padding-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.site-header__img {
+  height: 17vh;
+}
+
+.site-header__autor {
+  color: #2b2b2e;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
 }
 /*# sourceMappingURL=basic.css.map */
