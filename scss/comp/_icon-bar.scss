@@ -1,9 +1,7 @@
 .icon-bar{
     &__container{
         display: inline-block;
-        height: 3rem;
-        width: 3rem;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
             &:nth-child(1){
                  background-image: url(/assets/fb.svg);
@@ -17,10 +15,17 @@
                 background-image: url(/assets/mail-nocolor.svg);
       
             }
+           
             &:hover{
-                height: 3.5rem;
-                width: 3.5rem;
+                transition-duration: 2s;
+                transform: rotateY(360deg);
+                cursor: pointer;
             }
+    }
+    &__link{
+        display: inline-block;
+        height: 3rem;
+        width: 3rem;
     }
   
 }

@@ -2,9 +2,14 @@
     display: flex;
     flex-flow: column wrap;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: rgba(0, 255, 55, 0.575);
     height: 35vh;
+    &__copy{
+        color:rgb(43, 43, 46);
+        font-size: 1rem;
+        text-align: center;
+    }
 }
 .contact{
     display: flex;

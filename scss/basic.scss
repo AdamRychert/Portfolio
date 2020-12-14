@@ -8,10 +8,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+h3:hover{
+    text-shadow: 2.5px 2px #00ff00;
+    transition-duration: 0.8s;
+
+}
 body{
     display: flex;
     flex-flow: column wrap;
     font-size: 20px;
+    font-family: monospace;
+    font-weight: 900;
 }
 a{
     color: black;
@@ -34,16 +41,29 @@ li{
     display: flex;
     flex-flow: row wrap;
     justify-content:space-between;
-    &__h1{
-        padding-bottom: 1.5rem;
-        font-size: 2rem;
-    }
     &__img{
         height: 17vh;
+    }
+    
+}
+.headings{
+    width: auto;
+    &:hover{
+        text-shadow: 2.5px 2px #00ff00;
+        transition-duration: 0.8s;
+    }
+    
+    &__h1{
+        padding-bottom: 1rem;
+        font-size: 2rem;
+    }
+    &__h2{
+        padding-left: 30vw;
     }
     &__autor{
         color:rgb(43, 43, 46);
         font-size: 1.5rem;
         padding-bottom: 0.5rem;
+        padding-left: 53vw;
     }
 }
