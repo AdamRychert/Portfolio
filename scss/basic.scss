@@ -2,11 +2,13 @@
 @import "comp/baner";
 @import "comp/footer";
 @import "comp/icon-bar";
+@import "comp/about-me";
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 h3:hover{
     text-shadow: 2.5px 2px #00ff00;
@@ -28,8 +30,10 @@ li{
     list-style: none;
 }
 .common-style{
-    margin-bottom: 10vh;
+    margin-bottom: 20vh;
     padding: 0 10vw;
+    
+
 }
 .main{
     display: flex;
@@ -65,5 +69,23 @@ li{
         font-size: 1.5rem;
         padding-bottom: 0.5rem;
         padding-left: 53vw;
+    }
+}
+.school-list{
+    width: 100%;
+    line-height: 1.7rem;
+    &__item{
+        margin-bottom: 1.2rem;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    &__paragraph{
+        font-size: 0.9rem;
+    }
+    &__logo{
+        max-height: 30vh;
     }
 }

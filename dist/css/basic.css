@@ -108,11 +108,29 @@
   width: 3rem;
 }
 
+.about-me {
+  line-height: 2rem;
+}
+
+.about-me__article {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.about-me__heading {
+  margin-bottom: 1rem;
+}
+
+.about-me__quote {
+  font-size: 1.1rem;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 h3:hover {
@@ -144,7 +162,7 @@ li {
 }
 
 .common-style {
-  margin-bottom: 10vh;
+  margin-bottom: 20vh;
   padding: 0 10vw;
 }
 
@@ -203,5 +221,35 @@ li {
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
   padding-left: 53vw;
+}
+
+.school-list {
+  width: 100%;
+  line-height: 1.7rem;
+}
+
+.school-list__item {
+  margin-bottom: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.school-list__paragraph {
+  font-size: 0.9rem;
+}
+
+.school-list__logo {
+  max-height: 30vh;
 }
 /*# sourceMappingURL=basic.css.map */
