@@ -1,6 +1,7 @@
 .nav {
   height: 12vh;
   width: 100%;
+  border-bottom: 0.1rem solid green;
 }
 
 .nav__list {
@@ -22,6 +23,12 @@
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
   text-shadow: 1px 1px #00ff00;
+}
+
+.nav:hover {
+  background-color: rgba(101, 245, 113, 0.5);
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
 }
 
 .baner {
@@ -76,6 +83,11 @@
       justify-content: space-around;
 }
 
+.contact__text {
+  font-size: 1rem;
+  color: #5a5a5a;
+}
+
 .icon-bar__container {
   display: inline-block;
   background-size: contain;
@@ -125,12 +137,76 @@
   font-size: 1.1rem;
 }
 
+.galery {
+  min-height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.galery__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 38vw;
+  height: 40vh;
+  border: 1px solid green;
+  border-radius: 20px;
+}
+
+.galery__element:first-child {
+  margin-right: 2vw;
+}
+
+.galery__element:hover {
+  background-color: #23f883;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.galery__button {
+  color: green;
+  background-color: white;
+  border: 1px solid green;
+  border-radius: 10px;
+  width: 13vw;
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.galery__heading {
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 h3:hover {
@@ -229,7 +305,8 @@ li {
 }
 
 .school-list__item {
-  margin-bottom: 1.2rem;
+  margin: 1.5rem auto;
+  padding: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,6 +320,13 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 2px solid #20fa8d;
+}
+
+.school-list__item:hover {
+  background-color: #23f883;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
 }
 
 .school-list__paragraph {
@@ -250,6 +334,15 @@ li {
 }
 
 .school-list__logo {
-  max-height: 30vh;
+  max-height: 25vh;
+}
+
+.skills {
+  width: 100%;
+}
+
+.skills__link {
+  display: inline-block;
+  margin-top: 5vh;
 }
 /*# sourceMappingURL=basic.css.map */

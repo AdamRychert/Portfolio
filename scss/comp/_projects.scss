@@ -1,0 +1,38 @@
+.galery{
+    min-height: 60vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    &__element{ 
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        min-width:38vw;
+        height: 40vh;
+        border: 1px solid green;
+        border-radius: 20px;
+    }
+    &__element:first-child{
+        margin-right: 2vw;
+    }
+    &__element:hover{
+        background-color:rgb(35, 248, 131);
+        transition-duration: 2s;
+    }
+    
+    &__button{
+        color:green;
+        background-color: white;
+        border:1px solid green;
+        border-radius: 10px;
+        width: 13vw;
+        margin-top: 0.8rem;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    &__heading{
+        font-weight: bold;
+    }
+}

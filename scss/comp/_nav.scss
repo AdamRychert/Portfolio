@@ -2,6 +2,7 @@
 .nav{
     height: 12vh;
     width: 100%;
+    border-bottom: 0.1rem solid green;
     &__list{
         display: flex;
         flex-flow: row wrap;
@@ -16,4 +17,8 @@
         
         
     }
+}
+.nav:hover{
+    background-color: rgba(101, 245, 113,0.5);
+    transition-duration: 2s;
 }
