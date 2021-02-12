@@ -51,19 +51,22 @@ li{
     justify-content:space-between;
     
     &__img{
-        height: 17vh;
+        max-width: 20%;
+        width: 13vw;
     }
     
 }
 .headings{
-    width: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
     &:hover{
         text-shadow: 2.5px 2px #00ff00;
         transition-duration: 0.8s;
     }
     
     &__h1{
-        
         padding-bottom: 1rem;
         font-size: 2rem;
     }
@@ -108,4 +111,13 @@ li{
         display: inline-block;
         margin-top: 5vh;
     }
+}
+.github-icon{
+    background-image: url(/assets/github.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-top: 2vh;
+    width: 3rem;
+    height: 3rem;
 }
