@@ -12,18 +12,27 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 80%;
-}
-.r-panel{
-    flex: 1 50%;
-    padding: 2rem;
+    width: 90vw;
 }
 .l-panel{
-    flex: 1 50%;
-    padding: 2rem;
-&__text{
-    color: gray;
-    font-size: 1.2rem;
+    flex:1 25rem;
+    min-width: 20vw;
+    padding:2rem;
+    align-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column wrap;
+    &__text{
+        color: gray;
+        font-size: 1.2rem;
+    }
 }
-
+.r-panel{
+    flex:1 25rem;
+    min-width: 20vw;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
 }
