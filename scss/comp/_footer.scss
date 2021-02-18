@@ -1,23 +1,29 @@
 .footer{
     display: flex;
-    flex-flow: column wrap;
-    align-content: center;
-    justify-content: space-around;
-    background-color: rgba(0, 255, 55, 0.575);
-    height: 35vh;
+    justify-content: center;
+    background-color: rgb(124, 233, 147);
     &__copy{
         color:rgb(43, 43, 46);
         font-size: 1rem;
-        text-align: center;
     }
+   
 }
-.contact{
+.fwrapper{
     display: flex;
-    width: 90vw;
     flex-flow: row wrap;
-    justify-content: space-around;
-    &__text{
-        font-size: 1rem;
-        color: rgb(90, 90, 90);
-    }
+    justify-content: center;
+    width: 80%;
+}
+.r-panel{
+    flex: 1 50%;
+    padding: 2rem;
+}
+.l-panel{
+    flex: 1 50%;
+    padding: 2rem;
+&__text{
+    color: gray;
+    font-size: 1.2rem;
+}
+
 }

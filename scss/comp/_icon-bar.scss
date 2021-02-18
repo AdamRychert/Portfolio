@@ -3,6 +3,8 @@
         display: inline-block;
         background-size: contain;
         background-repeat: no-repeat;
+        cursor: pointer;
+        transition-duration: 2s;
             &:nth-child(1){
                  background-image: url(/assets/fb.svg);
                  
@@ -20,9 +22,9 @@
             }
            
             &:hover{
-                transition-duration: 2s;
-                transform: rotateY(360deg);
-                cursor: pointer;
+                
+                transform:scale(1.2) rotate(360deg);
+                
             }
     }
     &__link{

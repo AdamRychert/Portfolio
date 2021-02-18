@@ -1,12 +1,12 @@
 .baner{
-    height: 50vh;
-    min-height: 13rem;
+    height: 100%;
     display: flex;
     justify-content: center;
     
     &__img{
-        height: 100%;
-        border-bottom: 0.1rem solid green;
+        max-width:100%;
+        min-width: 15rem;
+        border-bottom: 0.1rem solid $fColorG;
         padding: 0 10vw;
     }
     

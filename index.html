@@ -11,8 +11,9 @@
 
 <body>
     <!-- NAVBAR -->
+
     <header>
-        <nav class="nav common-style">
+        <nav class="nav mg-b">
             <ul class="nav__list">
                 <li class="nav__item"><a href="#projects">PROJEKTY</a></li>
                 <li class="nav__item"><a href="#carrier">WYKSZTAŁCENIE</a></li>
@@ -20,14 +21,15 @@
                 <li class="nav__item"><a href="#about">O MNIE</a></li>
             </ul>
         </nav>
-        <section class="site-header common-style">
+        <section class="site-header">
             <!-- Headings -->
             <div class="headings">
                 <h1 class="headings__h1">ROZWIJAJĄCY SIĘ <strong>PROGRAMISTA</strong></h1>
                 <h2 class="headings__h2">STUDENT INFORMATYKI</h2>
                 <h3 class="headings__autor">ADAM RYCHERT</h3>
-                <div class="icon-bar">
+                <div class="icon-bar headings__icon-bar">
                     <!--ALL OF THE SITE GRAPHICS ARE CREATED BY ME-->
+
                     <span class="icon-bar__container">
                         <a href="https://www.facebook.com/adam.rychert.3" target="_blank" class="icon-bar__link"></a>
                     </span>
@@ -46,118 +48,140 @@
 
         </section>
     </header>
-    <!-- Baner image -->
-    <div class="baner common-style">
-        <img src="assets/picture.svg" class="baner__img">
-        <!--ALL OF THE SITE GRAPHICS ARE CREATED BY ME-->
-    </div>
-    <!-- MAIN CONTENT -->
-    <main class="main">
-        <section id="projects" class="common-style skills">
-            <h3>PROJEKTY I UMIEJĘTNOŚCI</h3>
-            <a  href="https://github.com/AdamRychert" target="_blank">Mój Github</a>
-            <span class="github-icon">
-                <a href="https://github.com/AdamRychert" target="_blank" class="icon-bar__link"></a>
-            </span>
-            <div class="galery">
-                <div class="galery__element">
-                    <h4 class="galery__heading">TO PORTFOLIO</h4>
-                    <a href="https://github.com/AdamRychert/Portfolio" target="_blank" class="galery__button">Zobacz kod</a>
-                </div>
-                <div class="galery__element">
-                    <h4 class="galery__heading">SZKOLNY PROJEKT STRONY</h4>
-                    <a href="https://github.com/AdamRychert/coffeisgreat" target="_blank" class="galery__button">Zobacz kod</a>
-                </div>
-            </div>
-
-        </section>
-        <section id="carrier" class="common-style school-list">
-            <h3>WYKSZTAŁCENIE</h3>
-            <ul class="school-list__list">
-                <li class="school-list__item">
-                    <div>
-                        <h4>Uniwersytet Kardynała Stefana Wyszyńskiego w Warszawie</h4>
-                        <p class="school-list__paragraph">Kierunek: Informatyka</p>
-                        <p class="school-list__paragraph school-list__date">15 Pażdziernik 2020 r. -> w trakcie</p>
+    <div class="wrapper">
+        <!-- Baner image -->
+        <div class="baner mg-b">
+            <img src="assets/picture.svg" class="baner__img">
+            <!--ALL OF THE SITE GRAPHICS ARE CREATED BY ME-->
+        </div>
+        <!-- MAIN CONTENT -->
+        <main class="main">
+            <section id="projects" class="skills mg-b">
+                <h3>PROJEKTY I UMIEJĘTNOŚCI</h3>
+                <a href="https://github.com/AdamRychert" target="_blank">Mój Github</a>
+                <span class="github-icon">
+                    <a href="https://github.com/AdamRychert" target="_blank" class="icon-bar__link"></a>
+                </span>
+                <div class="galery">
+                    <div class="galery__element">
+                        <h4 class="galery__heading">TO PORTFOLIO</h4>
+                        <a href="https://github.com/AdamRychert/Portfolio" target="_blank" class="galery__button">Zobacz
+                            kod</a>
                     </div>
-                    <img src="/assets/uksw-logo.png" alt="Logo of the university" class="school-list__logo">
-                </li>
-                <li class="school-list__item">
-                    <img src="/assets/PZS-logo.png" alt="Logo of the technical college" class="school-list__logo">
-                    <div>
-                        <h4>Powiatowy Zespół Szkół nr.2 im. Bohaterskiej Załogi ORP "Orzeł" w Wejherowie</h4>
-                        <p class="school-list__paragraph">Technikum, kierunek -> Informatyka </p>
-                        <p class="school-list__paragraph school-list__date">1 Września 2016 r. - 12 Kwietnia 2020 r.
+                    <div class="galery__element">
+                        <h4 class="galery__heading">SZKOLNY PROJEKT STRONY</h4>
+                        <a href="https://github.com/AdamRychert/coffeisgreat" target="_blank"
+                            class="galery__button">Zobacz
+                            kod</a>
+                    </div>
+
+                </div>
+
+            </section>
+            <section id="carrier" class="school-list mg-b">
+                <h3>WYKSZTAŁCENIE</h3>
+                <ul class="school-list__list">
+                    <li class="school-list__item">
+                        <div>
+                            <h4>Uniwersytet Kardynała Stefana Wyszyńskiego w Warszawie</h4>
+                            <p class="school-list__paragraph">Kierunek: Informatyka</p>
+                            <p class="school-list__paragraph school-list__date">15 Pażdziernik 2020 r. -> w trakcie</p>
+                        </div>
+                        <img src="/assets/uksw-logo.png" alt="Logo of the university" class="school-list__logo">
+                    </li>
+                    <li class="school-list__item">
+                        <img src="/assets/PZS-logo.png" alt="Logo of the technical college" class="school-list__logo">
+                        <div>
+                            <h4>Powiatowy Zespół Szkół nr.2 im. Bohaterskiej Załogi ORP "Orzeł" w Wejherowie</h4>
+                            <p class="school-list__paragraph">Technikum, kierunek -> Informatyka </p>
+                            <p class="school-list__paragraph school-list__date">1 Września 2016 r. - 12 Kwietnia 2020 r.
+                            </p>
+                            <p class="school-list__paragraph">Uzyskany dyplom <b>technika informatyka</b></p>
+                        </div>
+                    </li>
+                </ul>
+
+            </section>
+            <section id="about" class="about-me mg-b">
+                <h3 class="about-me__heading">KILKA SŁÓW O MNIE</h3>
+                <p class="about-me__quote">
+                    <q>In a time of deceit telling the truth is a revolutionary act - George Orwell</q> ...and here's
+                    the
+                    truth about me.
+                </p>
+                <hr>
+                <p>
+                    "Jak to portfolio może się wyróżnić na tle innych?", "Co ciekawego mogę o sobie napisać?" - takie
+                    myśli
+                    towarzyszyły mi podczas tworzenia tego tekstu i wtedy przypomniałem sobie o powyższym cytacie.
+                    Postaram
+                    się więc być tak szczerym, jak tylko to możliwe.
+                </p>
+
+
+                <article class="about-me__article">
+                    <h4 class="about-me__heading">IT - pasja, czy pogoń za pieniądzem</h4>
+                    <details>
+                        <p> Dokonując wyboru następnej szkoły nie kierowałem się niczym szczególnym - ot
+                            usłyszałem, że programerka to fajny zawód, w którym można dobrze zarobić.Dopiero parę lat
+                            póżniej stało się to dla mnie pasją. Uwielbiam programistyczne community, podejmowanie się i
+                            rozwiązywanie nowych problemów, prace przy komputerze i to, że mogę w jakiś sposób rozwijać
+                            się
+                            artystycznie (zawsze lubiłem malować) poprzez tworzenie grafiki, czy estetycznie
+                            wyglądającej
+                            strony
+                            internetowej </p>
+                    </details>
+
+                </article>
+                <article class="about-me__article">
+                    <h4 class="about-me__heading">Moje hobby (pomijając programowanie)</h4>
+                    <details>
+                        <p>Dobra książka, dobry film i dobra muzyka...</p>
+                        <p>Oczywiście jest to żart, którego umieszczenia w swoim CV raczej się wystrzegam. Choć faktem
+                            jest,
+                            że
+                            kocham książki i czytam od dzieciaka. Lubię rysować, choć strasznie tą pasje
+                            zaniedbałem w ostatnich latach na rzecz nauki. Ciekawią mnie też niektóre aspekty
+                            psychologii.
+                            Parę lat
+                            temu byłem też miłośnikiem siłowni choć i z tego zrezygnowałem na rzecz przygotowań do
+                            matury
+                            (ale na pewno jeszcze wrócę do ćwiczeń!). </p>
+
+                    </details>
+                </article>
+                <article class="about-me__article">
+                    <h4 class="about-me__heading">Technikum zamiast liceum!?</h4>
+                    <details>
+                        <p>
+                            Głównym powodem była chęć otrzymania zawodu (co mi się udało). Technikum wydawało mi się
+                            również
+                            opcją ciekawszą, kusiło ciekawymi przedmiotami i wiedzą praktyczną, możliwością poznania
+                            podstaw
+                            technicznych informatyki. Częściowo się to spełniło, częściowo nie... Na chwilę obecną nie
+                            jestem pewien, czy był to dobry wybór. Liceum z pewnością ma sporo zalet np. lepiej
+                            przygotowuje
+                            do matury i tego faktycznie mi w technikum brakowało, choć mogę narzekać tylko na swoje
+                            własne
+                            lenistwo, w końcu to, że czegoś nie uczą w szkole nie oznacza, że nie można się tego nauczyć
+                            samemu. Gdybym jednak zdecydował się na liceum, możliwe że nigdy nie rozpącząłbym mojej
+                            informatycznej przygody.
                         </p>
-                        <p class="school-list__paragraph">Uzyskany dyplom <b>technika informatyka</b></p>
-                    </div>
-                </li>
-            </ul>
-
-        </section>
-        <section id="about" class="about-me common-style">
-            <h3 class="about-me__heading">KILKA SŁÓW O MNIE</h3>
-            <p class="about-me__quote">
-                <q>In a time of deceit telling the truth is a revolutionary act - George Orwell</q> ...and here's the
-                truth about me.
-            </p>
-            <hr>
-            <p>
-                "Jak to portfolio może się wyróżnić na tle innych?", "Co ciekawego mogę o sobie napisać?" - takie myśli
-                towarzyszyły mi podczas tworzenia tego tekstu i wtedy przypomniałem sobie o powyższym cytacie. Postaram
-                się więc być tak szczerym, jak tylko to możliwe.
-            </p>
-
-
-            <article class="about-me__article">
-                <h4 class="about-me__heading">IT - pasja, czy pogoń za pieniądzem</h4>
-                <details>
-                    <p> Dokonując wyboru następnej szkoły nie kierowałem się niczym szczególnym - ot
-                        usłyszałem, że programerka to fajny zawód, w którym można dobrze zarobić.Dopiero parę lat
-                        póżniej stało się to dla mnie pasją. Uwielbiam programistyczne community, podejmowanie się i
-                        rozwiązywanie nowych problemów, prace przy komputerze i to, że mogę w jakiś sposób rozwijać się
-                        artystycznie (zawsze lubiłem malować) poprzez tworzenie grafiki, czy estetycznie wyglądającej strony
-                        internetowej </p>
-                </details>
-
-            </article>
-            <article class="about-me__article">
-                <h4 class="about-me__heading">Moje hobby (pomijając programowanie)</h4>
-                <details>
-                    <p>Dobra książka, dobry film i dobra muzyka...</p>
-                    <p>Oczywiście jest to żart, którego umieszczenia w swoim CV raczej się wystrzegam. Choć faktem jest, że
-                        kocham książki i czytam od dzieciaka. Lubię rysować, choć strasznie tą pasje
-                        zaniedbałem w ostatnich latach na rzecz nauki. Ciekawią mnie też niektóre aspekty psychologii. Parę lat
-                        temu byłem też miłośnikiem siłowni choć i z tego zrezygnowałem na rzecz przygotowań do matury (ale na pewno jeszcze wrócę do ćwiczeń!). </p>
-
-                </details>
-            </article>
-            <article class="about-me__article">
-                <h4 class="about-me__heading">Technikum zamiast liceum!?</h4>
-                <details>
-                    <p>
-                        Głównym powodem była chęć otrzymania zawodu (co mi się udało). Technikum wydawało mi się również
-                        opcją ciekawszą, kusiło ciekawymi przedmiotami i wiedzą praktyczną, możliwością poznania podstaw
-                        technicznych informatyki. Częściowo się to spełniło, częściowo nie... Na chwilę obecną nie
-                        jestem pewien, czy był to dobry wybór. Liceum z pewnością ma sporo zalet np. lepiej przygotowuje
-                        do matury i tego faktycznie mi w technikum brakowało, choć mogę narzekać tylko na swoje własne
-                        lenistwo, w końcu to, że czegoś nie uczą w szkole nie oznacza, że nie można się tego nauczyć
-                        samemu. Gdybym jednak zdecydował się na liceum, możliwe że nigdy nie rozpącząłbym mojej
-                        informatycznej przygody.
-                    </p>
-                </details>
-            </article>
-        </section>
-    </main>
+                    </details>
+                </article>
+            </section>
+        </main>
+    </div>
     <footer class="footer" id="contact">
-        <section class="contact">
-            <div>
+        <div class="fwrapper">
+            <div class="l-panel">
                 <h4>E-mail</h4>
-                <a href="mailto:adamry2000@gmail.com" target="_blank" class="contact__text">adamry2000@gmail.com</a>
+                <a href="mailto:adamry2000@gmail.com" target="_blank" class="l-panel__text">adamry2000@gmail.com</a>
                 <h4>CV</h4>
-                <a href="/assets/cv/moje-CV.pdf" download  class="contact__text">Kliknij aby pobrać</a>
+                <a href="/assets/cv/moje-CV.pdf" download class="l-panel__text">Kliknij aby pobrać</a>
             </div>
-            <div class="icon-bar">
+            <div class="icon-bar r-panel">
                 <!--ALL OF THE SITE GRAPHICS ARE CREATED BY ME-->
                 <span class="icon-bar__container">
                     <a href="https://www.facebook.com/adam.rychert.3" target="_blank" class="icon-bar__link"></a>
@@ -172,8 +196,9 @@
                     <a href="https://github.com/AdamRychert" target="_blank" class="icon-bar__link"></a>
                 </span>
             </div>
-        </section>
-        <p class="footer__copy">&copy Made by Adam Rychert. All rights reserved</p>
+
+            <p class="footer__copy">&copy Made by Adam Rychert. All rights reserved</p>
+        </div>
     </footer>
 </body>
 

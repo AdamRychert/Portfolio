@@ -2,23 +2,19 @@
 .nav{
     height: 12vh;
     width: 100%;
-    border-bottom: 0.1rem solid green;
     &__list{
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         padding-top: 5vh;
         
     }
     &__item:hover{
         border-bottom: 0.1rem solid rgb(43, 255, 0);
         transition-duration: 0.5s;
-        text-shadow: 1px 1px #00ff00; 
+        text-shadow: 0.05em 0.05em  $fColorG; 
+        transform:translateY(-0.25em) ;
         
         
     }
-}
-.nav:hover{
-    background-color: rgba(101, 245, 113,0.5);
-    transition-duration: 2s;
 }
