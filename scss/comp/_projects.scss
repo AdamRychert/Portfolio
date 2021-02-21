@@ -1,3 +1,11 @@
+
+.skills{
+    width: 100%;
+    &__link{
+        display: inline-block;
+        margin-top: 5vh;
+    }
+}
 .galery{
     display: flex;
     flex-flow: row wrap;
@@ -35,5 +43,18 @@
     }
     &__heading{
         font-weight: bold;
+    }
+}
+.github-icon{
+    background-image: url(/assets/github.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    transition-duration: 2s;
+    margin-top: 2vh;
+    width: 3rem;
+    height: 3rem;
+    &:hover{  
+        transform:scale(1.2) rotate(360deg);
     }
 }
