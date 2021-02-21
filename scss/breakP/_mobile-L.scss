@@ -1,0 +1,32 @@
+@media (max-width: 426px) { 
+    .nav{
+        &__list{
+            flex-flow:column nowrap;
+            align-items: center;
+            padding-top: 0;
+        }
+        &__item{
+            border: 1px solid black;
+            width: 100%;
+            text-align: center;
+            padding: 0.2rem;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+
+    }
+    .headings{
+        font-size: 0.8rem;
+        &__h1{
+            grid-column: 2/(span)5;
+        }
+        &__h2{
+        
+            grid-column: 2/5;
+        }
+        &__autor{
+            grid-column: 2/5;
+        }
+    }
+}
