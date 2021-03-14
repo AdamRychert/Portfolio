@@ -4,7 +4,7 @@
     font-size: 1.2rem;
 
     &__list {
-        display: none;
+        display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
         padding-top: 5vh;
