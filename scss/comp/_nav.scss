@@ -1,6 +1,6 @@
 
 .nav{
-    height: 12vh;
+    height: 100%;
     width: 100%;
     font-size: 1.2rem;
     &__list{
@@ -8,6 +8,7 @@
         flex-flow: row wrap;
         justify-content: space-around;
         padding-top: 5vh;
+        height: 12vh;
         
     }
     &__item:hover{

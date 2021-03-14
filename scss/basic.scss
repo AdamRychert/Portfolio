@@ -60,3 +60,19 @@ li{
 @import "breakP/medium";
 @import "breakP/small";
 @import "breakP/mobile-L";
+
+.hidden{
+    display: none;
+}
+.arrow{
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 20%;
+    background-color:limegreen ;
+    font-size: 2rem;
+    color: white;
+    position: fixed;
+    margin-top: 80vh;
+    margin-left: 90vw;
+}
