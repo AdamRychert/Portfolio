@@ -55,12 +55,6 @@ li{
 @import "comp/school-list";
 @import "comp/about-me";
 @import "comp/footer";
-
-
-@import "breakP/medium";
-@import "breakP/small";
-@import "breakP/mobile-L";
-
 .hidden{
     display: none;
 }
@@ -76,3 +70,7 @@ li{
     margin-top: 80vh;
     margin-left: 90vw;
 }
+
+@import "breakP/medium";
+@import "breakP/small";
+@import "breakP/mobile-L";

@@ -1,29 +1,87 @@
 @media (max-width: 426px) {  
     .nav{
         display: flex;
+        position: fixed;
         flex-flow: column nowrap;
-        align-items: center;
-    
+        align-items: flex-start;
+        margin-bottom: 0;
         &__list{
-            display: none;
             position:absolute;
             flex-flow:column nowrap;
             align-items: center;
-            background-color: lightgreen;
+            background-color: white;
             height: auto;
         }
         &__item{
-            border: 1px solid black;
+            border: 1px solid limegreen;
             width: 100vw;
             text-align: center;
-            padding: 0.2rem;
+            padding: 1rem;
             &:hover{
                 transform: scale(1.2);
             }
         }
+        &__btn {
+            margin: 0.5rem 0 0 0.5rem;
+            z-index: 2;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1.5rem;
+            height: 1.5rem;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            border: 2px solid limegreen;
+        }
+    
+        &__burger {
+            width: 0.9rem;
+            height: 0.18rem;
+            background: limegreen;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(27, 121, 230, 0.2);
+            transition: all .5s ease-in-out;
+        }
+    
+        &__burger::before,
+        &__burger::after {
+            content: '';
+            position: absolute;
+            width: 0.9rem;
+            height: 0.18rem;
+            background: limegreen;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+        }
+    
+        &__burger::before {
+            transform: translateY(-0.3rem);
+        }
+    
+        &__burger::after {
+            transform: translateY(0.3rem);
+        }
+    
+        &__btn.open &__burger {
+            transform: translateX(-0.3rem);
+            background: transparent;
+            box-shadow: none;
+        }
+    
+        &__btn.open
+        &__burger::before {
+            transform: rotate(45deg) translate(0.2rem, -0.2rem);
+        }
+    
+        &__btn.open
+        &__burger::after {
+            transform: rotate(-45deg) translate(0.2rem, 0.2rem);
+        }
 
     }
     .headings{
+        margin-top: 4rem;
         font-size: 0.8rem;
         &__h1{
             grid-column: 2/(span)5;
@@ -44,4 +102,10 @@
         border: none;
     }
    
+}
+.arrow{
+    display: none;
+}
+.l-panel{
+    align-content: flex-start;
 }
