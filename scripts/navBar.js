@@ -1,7 +1,6 @@
 const navBar = document.querySelector('.nav');
 const menuBtn = document.querySelector('.nav__btn');
 const navList = document.querySelector('.nav__list');
-const navItems = document.querySelectorAll('.nav__item');
 let menuOpn = false;
 
 menuBtn.addEventListener('click', () => {

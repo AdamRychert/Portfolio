@@ -1,19 +1,19 @@
 .school-list{
     line-height: 1.5;
     width: 100%;
+    font-size: 1rem;
     &__item{
-        margin: 1.5rem auto;
-        padding: 0.5rem;
+        margin: 1.5em auto;
+        padding: 0.5em;
         display: flex;
         flex-flow: row wrap;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 2px solid rgb(32, 250, 141);
-        transition-duration: 2s;
-        
+        border-bottom: 2px solid rgb(0, 247, 123);
+        transition:background-color ease-in-out 1s;
     }
     &__item:hover{
-        background-color: #23CE6B;
+        background-color: rgba(#23CE6B,0.6);
   
     }
     &__paragraph{

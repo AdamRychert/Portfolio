@@ -1,6 +1,7 @@
 .footer{
     display: flex;
     flex-flow: column nowrap;
+    font-size: 1rem;
     align-items: center;
     background-color: rgb(124, 233, 147);
     &__copy{
@@ -14,14 +15,14 @@
     flex-flow: row wrap;
     justify-content: center;
     align-content: space-between;
-    padding:2rem;
+    padding:2em;
     width: 90vw;
 }
 .l-panel{
-    flex:1 20rem;
+    flex:1 20em;
     display: flex;
     min-width: 20vw;
-    padding-bottom: 1rem;
+    padding-bottom: 1em;
     align-content: center;
     align-items: flex-start;
     flex-flow: column wrap;
@@ -31,7 +32,7 @@
     }
 }
 .r-panel{
-    flex:1 25rem;
+    flex:1 25em;
     min-width: 20vw;
     flex-flow: row nowrap;
     justify-content: center;
