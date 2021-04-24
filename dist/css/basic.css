@@ -1,3 +1,11 @@
+/*Table of contents:
+    1. Global styles
+    2. Components
+    3. Breakpoints
+*/
+/*===========
+    Global styles
+============*/
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +14,15 @@
   scroll-behavior: smooth;
 }
 
-html {
-  font-size: 16px;
-}
-
 *::after, *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: Courier New, monospaced;
+  font-weight: 600;
 }
 
 body {
@@ -23,20 +33,18 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  font-family: Courier New, monospaced;
-  font-weight: 600;
   background-color: white;
   color: #0B0A07;
 }
 
 h3 {
   font-size: 1.4rem;
-  -webkit-transition-duration: 0.8s;
-          transition-duration: 0.8s;
+  -webkit-transition: text-shadow ease-in-out 0.8s;
+  transition: text-shadow ease-in-out 0.8s;
 }
 
 h3:hover {
-  text-shadow: 2.5px 2px #00ff00;
+  text-shadow: 0.1em 0.1em #00ff00;
 }
 
 a {
@@ -48,7 +56,7 @@ li {
   list-style: none;
 }
 
-.wrapper {
+.wrapper, .main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,49 +67,64 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.main {
+  width: 80vw;
 }
 
 .mg-b {
   margin-bottom: 5rem;
 }
 
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 80vw;
+.hidden {
+  display: none;
 }
 
+.arrow {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 20%;
+  background-color: limegreen;
+  font-size: 2rem;
+  color: white;
+  position: fixed;
+  margin-top: 80vh;
+  margin-left: 90vw;
+}
+
+/*===========
+    Components
+============*/
+/*===========
+    Icon bar
+============*/
 .icon-bar__container {
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
+  -webkit-transition: -webkit-transform ease-in-out 1s;
+  transition: -webkit-transform ease-in-out 1s;
+  transition: transform ease-in-out 1s;
+  transition: transform ease-in-out 1s, -webkit-transform ease-in-out 1s;
 }
 
 .icon-bar__container:nth-child(1) {
-  background-image: url(assets/fb.svg);
+  background-image: url(/assets/icons/fb.svg);
 }
 
 .icon-bar__container:nth-child(2) {
-  background-image: url(assets/1ins.svg);
+  background-image: url(/assets/icons/1ins.svg);
 }
 
 .icon-bar__container:nth-child(3) {
-  background-image: url(assets/mail-nocolor.svg);
+  background-image: url(/assets/icons/mail-nocolor.svg);
 }
 
 .icon-bar__container:nth-child(4) {
-  background-image: url(assets/github.svg);
+  background-image: url(/assets/icons/github.svg);
 }
 
 .icon-bar__container:hover {
@@ -115,6 +138,9 @@ li {
   width: 2.5rem;
 }
 
+/*===========
+    Nav
+============*/
 .nav {
   height: 5rem;
   width: 100%;
@@ -145,10 +171,13 @@ li {
 .nav__item:hover {
   border-bottom: 0.1rem solid #2bff00;
   text-shadow: 0.1rem 0.1rem #40EB10;
-  -webkit-transform: translateY(-0.25em);
-          transform: translateY(-0.25em);
+  -webkit-transform: translateY(-0.25rem);
+          transform: translateY(-0.25rem);
 }
 
+/*===========
+    Header
+============*/
 .site-header {
   height: auto;
   display: -webkit-box;
@@ -177,6 +206,7 @@ li {
   -ms-grid-columns: 1fr 3fr 3fr 2fr 1fr;
       grid-template-columns: 1fr 3fr 3fr 2fr 1fr;
   font-size: 1rem;
+  position: relative;
 }
 
 .headings:hover {
@@ -221,6 +251,36 @@ li {
   grid-column: 1/span 3;
 }
 
+.headings::after {
+  content: '';
+  position: absolute;
+  top: -1em;
+  left: -1em;
+  bottom: -1em;
+  right: -1em;
+  z-index: -2;
+}
+
+.headings::after {
+  border-right: 5px ridge green;
+  border-left: 5px ridge green;
+  border-radius: 20px;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transition: -webkit-transform ease-out 250ms;
+  transition: -webkit-transform ease-out 250ms;
+  transition: transform ease-out 250ms;
+  transition: transform ease-out 250ms, -webkit-transform ease-out 250ms;
+}
+
+.headings:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+/*===========
+    Baner
+============*/
 .baner {
   height: 100%;
   display: -webkit-box;
@@ -229,6 +289,7 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 10vh;
 }
 
 .baner__img {
@@ -238,6 +299,9 @@ li {
   padding: 0 10vw;
 }
 
+/*===========
+    Section1 -> projects
+============*/
 .skills {
   width: 100%;
 }
@@ -271,8 +335,6 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -335,8 +397,10 @@ li {
   font-size: 1.1em;
   padding: 0.3em;
   text-align: center;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
 }
 
 .galery__button:hover {
@@ -367,6 +431,9 @@ li {
           transform: scale(1.2);
 }
 
+/*===========
+    Section2-> school-list
+============*/
 .school-list {
   line-height: 1.5;
   width: 100%;
@@ -411,6 +478,9 @@ li {
   font-size: 1.1rem;
 }
 
+/*===========
+    About
+============*/
 .about-me {
   line-height: 2;
   font-size: 1rem;
@@ -430,6 +500,9 @@ li {
   color: #40EB10;
 }
 
+/*===========
+    Footer
+============*/
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -514,23 +587,9 @@ li {
   display: flex;
 }
 
-.hidden {
-  display: none;
-}
-
-.arrow {
-  width: 3rem;
-  height: 3rem;
-  border: none;
-  border-radius: 20%;
-  background-color: limegreen;
-  font-size: 2rem;
-  color: white;
-  position: fixed;
-  margin-top: 80vh;
-  margin-left: 90vw;
-}
-
+/*===========
+    Break points
+============*/
 @media (max-width: 1024px) {
   html {
     font-size: 14px;

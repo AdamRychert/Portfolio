@@ -1,89 +1,97 @@
-
-.skills{
+.skills {
     width: 100%;
-    &__link{
+
+    &__link {
         display: inline-block;
         margin-top: 2.5rem;
     }
 }
-.galery{
+
+.galery {
     display: flex;
     flex-flow: row wrap;
-    margin-top:1.5rem;
+    margin-top: 1.5rem;
     z-index: -1;
- 
-    &__element{ 
+
+    &__element {
         display: flex;
         position: relative;
         flex-flow: column wrap;
         justify-content: center;
-        align-content: center;
         align-items: center;
-        flex:1 18rem;
+        flex: 1 18rem;
         min-width: 20vw;
         min-height: 10rem;
-        margin:1rem;
+        margin: 1rem;
         background-color: rgba($color: lightgreen, $alpha: .5);
         border-radius: 20px;
 
-        &::after, 
-        &::before{
-            content:'';
+        &::after,
+        &::before {
+            content: '';
             position: absolute;
-            top:1em;
-            left:1em;
-            bottom:1em;
+            top: 1em;
+            left: 1em;
+            bottom: 1em;
             right: 1em;
             z-index: -2;
         }
-        &::before{
-            border-top:5px solid black;
+
+        &::before {
+            border-top: 5px solid black;
             border-bottom: 2px solid black;
             border-radius: 20px;
-            transform:scale(0,1);
+            transform: scale(0, 1);
             transition: transform ease-out 550ms;
         }
-        &::after{
+
+        &::after {
             border-right: 5px solid black;
             border-left: 2px solid black;
             border-radius: 20px;
-            transform:scale(1,0);
+            transform: scale(1, 0);
             transition: transform ease-out 250ms;
         }
-        &:hover::before, &:hover::after{
-            transform: scale(1,1);
+
+        &:hover::before,
+        &:hover::after {
+            transform: scale(1, 1);
         }
     }
-    
-    &__button{
-        color:$fColorG;
+
+    &__button {
+        color: $fColorG;
         background-color: white;
-        border:1px solid green;
+        border: 1px solid green;
         border-radius: 10px;
         width: 8em;
         margin-top: 0.8em;
         font-size: 1.1em;
         padding: 0.3em;
         text-align: center;
-        transition-duration: 2s;
-        &:hover{
+        transition: transform ease-in-out 250ms;
+
+        &:hover {
             transform: scale(0.9);
         }
     }
-    &__heading{
+
+    &__heading {
         font-weight: bold;
     }
 }
-.github-link::after{
-    content:'';
+
+.github-link::after {
+    content: '';
     background-image: url(/assets/github.svg);
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
     width: 2rem;
     height: 2rem;
-    transition:transform ease-in 250ms;
+    transition: transform ease-in 250ms;
 }
-.github-link:hover::after{
-    transform:scale(1.2);
+
+.github-link:hover::after {
+    transform: scale(1.2);
 }

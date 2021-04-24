@@ -16,6 +16,7 @@
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 3fr 3fr 2fr 1fr;
     font-size: 1rem;
+    position: relative;
     &:hover{
         text-shadow: 0.05em 0.05em  $fColorG; 
         transition-duration: 0.8s;
@@ -40,5 +41,28 @@
     &__icon-bar{
         grid-row:4;
         grid-column: 1/(span)3;
+    }
+
+    
+    &::after{
+        content: '';
+        position: absolute;
+        top: -1em;
+        left: -1em;
+        bottom: -1em;
+        right: -1em;
+        z-index: -2;
+    }
+
+    &::after {
+        border-right: 5px ridge green;
+        border-left: 5px ridge green;
+        border-radius: 20px;
+        transform: scale(1, 0);
+        transition: transform ease-out 250ms;
+    }
+
+    &:hover::after {
+        transform: scale(1, 1);
     }
 }

@@ -1,32 +1,43 @@
 @import "comp/variables";
 
 // ADD leter spacing or not? Which one looks better?
+
+/*Table of contents:
+    1. Global styles
+    2. Components
+    3. Breakpoints
+*/
+
+
+/*===========
+    Global styles
+============*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-html{
-    font-size: 16px;
-}
 *::after, *::before{
     box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    font-family:Courier New, monospaced;
+    font-weight: 600;
 }
 body{
     display: flex;
     flex-flow: column wrap;
-    font-family:Courier New, monospaced;
-    font-weight: 600;
     background-color: $bColor;
     color:$fColor;
 }
 h3{
     font-size: 1.4rem;
-    transition-duration: 0.8s;
+    transition:text-shadow ease-in-out 0.8s;
 }
 h3:hover{
-    text-shadow: 2.5px 2px #00ff00;
+    text-shadow: 0.1em 0.1em #00ff00;
 }
 
 a{
@@ -36,30 +47,17 @@ a{
 li{
     list-style: none;
 }
-.wrapper{
+.wrapper, .main{
     display: flex;
     flex-flow:column wrap;
     align-items: center;
 }
+.main{
+    width: 80vw;
+}
 .mg-b{
     margin-bottom: 5rem;
 }
-.main{
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    width: 80vw;
-}
-@import "comp/icon-bar";
-
-@import "comp/nav";
-@import "comp/site-header";
-@import "comp/baner";
-
-@import "comp/projects";
-@import "comp/school-list";
-@import "comp/about-me";
-@import "comp/footer";
 .hidden{
     display: none;
 }
@@ -75,7 +73,51 @@ li{
     margin-top: 80vh;
     margin-left: 90vw;
 }
+/*===========
+    Components
+============*/
 
+/*===========
+    Icon bar
+============*/
+@import "comp/icon-bar";
+
+/*===========
+    Nav
+============*/
+@import "comp/nav";
+
+/*===========
+    Header
+============*/
+@import "comp/site-header";
+
+/*===========
+    Baner
+============*/
+@import "comp/baner";
+/*===========
+    Section1 -> projects
+============*/
+@import "comp/projects";
+/*===========
+    Section2-> school-list
+============*/
+@import "comp/school-list";
+/*===========
+    About
+============*/
+@import "comp/about-me";
+/*===========
+    Footer
+============*/
+@import "comp/footer";
+
+
+
+/*===========
+    Break points
+============*/
 @import "breakP/medium";
 @import "breakP/small";
 @import "breakP/mobile-L";
