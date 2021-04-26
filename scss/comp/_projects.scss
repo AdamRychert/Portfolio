@@ -71,7 +71,8 @@
         text-align: center;
         transition: transform ease-in-out 250ms;
 
-        &:hover {
+        &:hover,
+        &:focus {
             transform: scale(0.9);
         }
     }

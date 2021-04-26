@@ -82,16 +82,17 @@ li {
 }
 
 .arrow {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   border: none;
   border-radius: 20%;
   background-color: limegreen;
-  font-size: 2rem;
+  font-size: 1rem;
   color: white;
   position: fixed;
   margin-top: 80vh;
   margin-left: 90vw;
+  cursor: pointer;
 }
 
 /*===========
@@ -127,7 +128,7 @@ li {
   background-image: url(/assets/icons/github.svg);
 }
 
-.icon-bar__container:hover {
+.icon-bar__container:hover, .icon-bar__container:focus {
   -webkit-transform: scale(1.2) rotate(360deg);
           transform: scale(1.2) rotate(360deg);
 }
@@ -166,10 +167,29 @@ li {
   transition: -webkit-transform ease-in-out 500ms;
   transition: transform ease-in-out 500ms;
   transition: transform ease-in-out 500ms, -webkit-transform ease-in-out 500ms;
+  position: relative;
+}
+
+.nav__item::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0.12rem;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
+.nav__item:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  background-color: chartreuse;
 }
 
 .nav__item:hover {
-  border-bottom: 0.1rem solid #2bff00;
   text-shadow: 0.1rem 0.1rem #40EB10;
   -webkit-transform: translateY(-0.25rem);
           transform: translateY(-0.25rem);
@@ -403,7 +423,7 @@ li {
   transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
 }
 
-.galery__button:hover {
+.galery__button:hover, .galery__button:focus {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
@@ -637,6 +657,7 @@ li {
         -ms-flex-align: start;
             align-items: flex-start;
     margin-bottom: 0;
+    z-index: 1;
   }
   .nav__list {
     display: none;
@@ -650,6 +671,7 @@ li {
             align-items: center;
     background-color: white;
     height: auto;
+    padding-top: 0;
   }
   .nav__item {
     border: 1px solid limegreen;
@@ -662,7 +684,7 @@ li {
             transform: scale(1.2);
   }
   .nav__btn {
-    margin: 0.5rem 0 0 0.5rem;
+    margin: 1rem 0 0 0.5rem;
     z-index: 2;
     position: relative;
     display: -webkit-box;
@@ -725,7 +747,7 @@ li {
             transform: rotate(-45deg) translate(0.2rem, 0.2rem);
   }
   .headings {
-    margin-top: 4rem;
+    margin-top: 2rem;
     font-size: 0.8rem;
   }
   .headings__h1 {
@@ -750,10 +772,6 @@ li {
     background-color: transparent;
     border: none;
   }
-}
-
-.arrow {
-  display: none;
 }
 
 .l-panel {

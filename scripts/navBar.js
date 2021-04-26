@@ -24,11 +24,12 @@ navList.addEventListener('click', () => {
 
 const arrow = document.querySelector('.arrow');
 window.onscroll = function () {
-    if (document.documentElement.scrollTop > 90) {
+    if (document.documentElement.scrollTop > 70) {
         arrow.classList.remove('hidden');
+    }else{
+        arrow.classList.add('hidden');
     }
 }
 arrow.addEventListener('click', () => {
     document.documentElement.scrollTop = 0;
-    arrow.classList.add('hidden');
 })

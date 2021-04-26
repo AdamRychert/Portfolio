@@ -25,7 +25,8 @@
             background-image: url(/assets/icons/github.svg);
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             transform: scale(1.2) rotate(360deg);
         }
     }

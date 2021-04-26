@@ -12,10 +12,22 @@
     }
     &__item{
         transition: transform ease-in-out 500ms;
+        position: relative;
+        &::after{
+            content:'';
+            display: block;
+            width: 100%;
+            height: 0.12rem;
+            transform: scaleX(0);
+            transition: transform ease-in-out 250ms;
+        }
+        &:hover::after{
+            transform: scaleX(1);
+            background-color: chartreuse;
+        }
     }
 
-    &__item:hover {
-        border-bottom: 0.1rem solid rgb(43, 255, 0);
+    &__item:hover{
         text-shadow: 0.1rem 0.1rem $fColorG;
         transform: translateY(-0.25rem);
     }
