@@ -21,7 +21,11 @@
                 background-color: rgba(#23CE6B,0.6);
             }
         }
-        &__logo, &__logo2{
+        &__logo{
+            flex:none;
+            height: 5em;
+        }
+        &__logo2{
             flex:none;
             height: 5em;
         }

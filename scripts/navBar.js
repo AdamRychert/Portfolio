@@ -8,19 +8,13 @@ menuBtn.addEventListener('click', () => {
         menuBtn.classList.add('open');
         navList.style.display = "flex";
         menuOpn = true;
-    } else {
+    }else{
         menuBtn.classList.remove('open');
         navList.style.display = "none";
         menuOpn = false;
     }
 })
 
-
-navList.addEventListener('click', () => {
-    menuBtn.classList.remove('open');
-    navList.style.display = "none";
-    menuOpn = false;
-})
 
 const arrow = document.querySelector('.arrow');
 window.onscroll = function () {

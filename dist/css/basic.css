@@ -656,7 +656,13 @@ li {
   .school-list__content:hover {
     background-color: rgba(35, 206, 107, 0.6);
   }
-  .school-list__logo, .school-list__logo2 {
+  .school-list__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    height: 5em;
+  }
+  .school-list__logo2 {
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none;
