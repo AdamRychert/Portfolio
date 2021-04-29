@@ -2,4 +2,28 @@
     html{
         font-size: 11px;
     }
+    .school-list{
+        &__item{
+            display: grid;
+            place-items: left;
+            height: 100%;
+            border:none;
+            &:hover{
+                background-color: transparent;
+            }
+        }
+        &__content{
+            width: 100%;
+            padding: 1em;
+            border-bottom: 2px solid rgb(0, 247, 123);
+            transition:background-color ease-in-out 1s;
+            &:hover{
+                background-color: rgba(#23CE6B,0.6);
+            }
+        }
+        &__logo, &__logo2{
+            flex:none;
+            height: 5em;
+        }
+    }
 }

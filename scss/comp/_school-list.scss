@@ -4,24 +4,27 @@
     font-size: 1rem;
     &__item{
         margin: 1.5em auto;
+        height: 8em;
         padding: 0.5em;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: space-between;
+        display: block;
         border-bottom: 2px solid rgb(0, 247, 123);
         transition:background-color ease-in-out 1s;
     }
     &__item:hover{
         background-color: rgba(#23CE6B,0.6);
-  
+
     }
     &__paragraph{
         font-size: 0.8rem;
         color:rgb(43, 43, 46) ;
     }
     &__logo{
-        max-height: 5rem;
+        float: right;
+        height: 100%;
+    }
+    &__logo2{
+        float:left;
+        height: 100%;
     }
     &_h4{
         font-size: 1.1rem;
