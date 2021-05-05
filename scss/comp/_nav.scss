@@ -2,7 +2,9 @@
     height: 5rem;
     width: 100%;
     font-size: 1.2rem;
-
+    &__quote{
+        display: none;
+    }
     &__list {
         display: flex;
         flex-flow: row wrap;

@@ -2,31 +2,63 @@
     .nav{
         display: flex;
         position: fixed;
-        flex-flow: column nowrap;
-        align-items: flex-start;
-        margin-bottom: 0;
-        z-index: 1;
-        
+        flex-flow: row wrap;
+        align-content: center;
+        justify-content: space-around;
+        z-index: 800;
+        background-color: royalblue;
+        max-height: 14vw;
+        &__quote{
+            display:flex;
+            font-size: 0.7em;
+            position: relative;
+            width: 70vw;
+            transform: rotate(-2deg);
+            color: white;
+            font-weight: 800;
+            &::after{
+                content: "Albert Einstein";
+                transform: translateY(1.2rem) translateX(-5rem) rotate(5deg);
+            }
+        }
         &__list{
             display: none;
             position:absolute;
             flex-flow:column nowrap;
             align-items: center;
-            background-color: white;
             height: auto;
-            padding-top: 0;
+            top:14vw;
+            padding: 0;
         }
         &__item{
-            border: 1px solid limegreen;
             width: 100vw;
             text-align: center;
-            padding: 1rem;
+            padding: 0.7em;
+            transition: all ease-in-out 1s;
+            transform: translateX(-100%);
+            opacity: 0;
             &:hover{
                 transform: scale(1.2);
             }
         }
+        &__item:nth-child(1){
+            background-color: #29A0B1;
+        }
+        &__item:nth-child(2){
+            background-color: #167D7F;
+        }
+        &__item:nth-child(3){
+            background-color: #98D7C2;
+        }
+        &__item:nth-child(4){
+            background-color: #DDFFE7;
+        }
+        &__item.item-open{
+            transform: translateX(0);
+            opacity: 1;
+        }
+       
         &__btn {
-            margin: 1rem 0 0 0.5rem;
             z-index: 2;
             position: relative;
             display: flex;
@@ -36,13 +68,13 @@
             height: 1.5rem;
             cursor: pointer;
             transition: all .5s ease-in-out;
-            border: 2px solid limegreen;
+            border: 2px solid white;
         }
     
         &__burger {
             width: 0.9rem;
             height: 0.18rem;
-            background: limegreen;
+            background: white;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(27, 121, 230, 0.2);
             transition: all .5s ease-in-out;
@@ -54,7 +86,7 @@
             position: absolute;
             width: 0.9rem;
             height: 0.18rem;
-            background: limegreen;
+            background: white;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
         }
@@ -85,7 +117,7 @@
 
     }
     .headings{
-        margin-top: 2rem;
+        margin-top: 8vh;
         font-size: 0.8rem;
         &__h1{
             grid-column: 2/(span)5;
@@ -97,13 +129,6 @@
         &__autor{
             grid-column: 2/5;
         }
-    }
-    .burger{
-        display: block;
-        z-index: 5;
-        margin-top: 0.5rem;
-        background-color: transparent;
-        border: none;
     }
    
 }

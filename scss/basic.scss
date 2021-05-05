@@ -103,6 +103,7 @@ li{
     Section1 -> projects
 ============*/
 @import "comp/projects";
+@import "comp/technologies";
 /*===========
     Section2-> school-list
 ============*/
@@ -111,6 +112,10 @@ li{
     About
 ============*/
 @import "comp/about-me";
+/*===========
+    Contact
+============*/
+@import "comp/contact";
 /*===========
     Footer
 ============*/
