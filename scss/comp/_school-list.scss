@@ -2,6 +2,7 @@
     line-height: 1.5;
     width: 100%;
     font-size: 1rem;
+    
     &__item{
         margin: 1.5em auto;
         height: 8em;
@@ -9,7 +10,13 @@
         display: block;
         border-bottom: 2px solid rgb(0, 247, 123);
         transition:background-color ease-in-out 1s;
+        position: relative;
     }
+    &__content{
+        height: 100%;
+        display: grid;
+    }
+  
     &__item:hover{
         background-color: rgba(#23CE6B,0.6);
 

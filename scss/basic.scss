@@ -64,17 +64,29 @@ li{
     display: none;
 }
 .arrow{
-    width: 2rem;
-    height: 2rem;
+    width: 2.2rem;
+    height: 2.2rem;
     border: none;
     border-radius: 20%;
-    background-color:limegreen ;
+    background-color:#50514f;
     font-size: 1rem;
     color: white;
     position: fixed;
     margin-top: 80vh;
     margin-left: 90vw;
     cursor: pointer;
+    &::after{
+        content: '';
+        display: inline-block;
+        width: 1.2rem;
+        height: 1.2rem;
+        clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+        position: absolute;
+        background-color: white;
+        transform: rotate(-90deg);
+        left:20%;
+        top:20%;
+    }
 }
 /*===========
     Components
@@ -129,3 +141,4 @@ li{
 @import "breakP/medium";
 @import "breakP/small";
 @import "breakP/mobile-L";
+@import "breakP/big";

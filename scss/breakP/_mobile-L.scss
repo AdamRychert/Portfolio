@@ -73,7 +73,7 @@
     
         &__burger {
             width: 0.9rem;
-            height: 0.18rem;
+            height: 0.12rem;
             background: white;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(27, 121, 230, 0.2);
@@ -85,7 +85,7 @@
             content: '';
             position: absolute;
             width: 0.9rem;
-            height: 0.18rem;
+            height: 0.12rem;
             background: white;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
@@ -117,7 +117,7 @@
 
     }
     .headings{
-        margin-top: 8vh;
+        margin-top: 12vh;
         font-size: 0.8rem;
         &__h1{
             grid-column: 2/(span)5;
@@ -130,9 +130,9 @@
             grid-column: 2/5;
         }
     }
+    .arrow{
+        display: none;
+    }
    
-}
-.l-panel{
-    align-content: flex-start;
 }
 
