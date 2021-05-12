@@ -15,6 +15,7 @@
     &__item{
         transition: transform ease-in-out 500ms;
         position: relative;
+        cursor: pointer;
         &::after{
             content:'';
             display: block;

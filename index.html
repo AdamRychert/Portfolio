@@ -24,7 +24,7 @@
             <ul class="nav__list">
                 <li class="nav__item"><a href="#projects">PROJEKTY</a></li>
                 <li class="nav__item"><a href="#carrier">WYKSZTAŁCENIE</a></li>
-                <li class="nav__item"><a href="#contact">KONTAKT</a></li>
+                <li class="nav__item" id="contact">KONTAKT</li>
                 <li class="nav__item"><a href="#about">O MNIE</a></li>
             </ul>
         </nav>
@@ -85,7 +85,7 @@
                             kod</a>
                     </div>
                     <div class="galery__element">
-                        <h4 class="galery__heading">Java Script 30 (Wes Bos Chellange)</h4>
+                        <h4 class="galery__heading">Java Script 30 (Wes Bos Challenge)</h4>
                         <a href="https://github.com/AdamRychert/JavaScript30" rel="noreferrer" target="_blank"
                             class="galery__button">Zobacz
                             kod</a>
@@ -205,20 +205,32 @@
     </div>
     <div class="overlay">
         <section class="contact">
-            <form class="form">
-                <h3>Napisz do mnie!</h3>
-                <div>
-                    <label for="email" class="form__label">Podaj swój email
+            <div class="contact__btn closeOverlay">
+                <div class="contact__burger">
+                </div>
+            </div>
+            <form class="form" action="mailto:kontakt@adamrychert.pl" method="post" enctype="text/plain">
+                <h3 class="form__heading">Napisz do mnie!</h3>
+                <div class="form__container">
+                    <label for="email" class="form__label">
+                        <p>Twój e-mail</p>
                         <input type="email" name="email" class="form__input" placeholder="JanKowalski@gmail.com">
                     </label>
-                    <label for="temat" class="form__label">Temat
+                    <label for="temat" class="form__label">
+                        <p>Temat</p>
                         <input type="text" name="temat" class="form__input" placeholder="Kontakt">
                     </label>
+                    <label for="content" class="form__label">
+                        <p>Wiadomość</p>
+                        <textarea name="content" class="form__message" rows="4" cols="40"
+                            placeholder="Treść wiadmości"></textarea>
+                    </label>
+                    <button type="submit" class="form__btn">Wyślij</button>
                 </div>
             </form>
             <section class="contact__cv">
-                <h4>Pobierz moje CV</h4>
-                <a href="/assets/cv/moje-CV.pdf" download>Kliknij aby pobrać</a>
+                <h4 class="contact__cv-heading">Pobierz moje CV</h4>
+                <a href="/assets/cv/moje-CV.pdf" class="contact__download" download>Kliknij tutaj</a>
             </section>
         </section>
     </div>
@@ -257,6 +269,7 @@
 
     <button class="arrow hidden"></button>
     <script src="/scripts/navBar.js"></script>
+    <script src="/scripts/contact.js"></script>
 </body>
 
 </html>

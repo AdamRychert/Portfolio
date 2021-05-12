@@ -1,30 +1,169 @@
 .overlay{
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(48, 48, 48, 0.445);
+    min-height: 100vh;
+    min-width: 100vw; 
     position: fixed;
     display: flex;
     align-items: center;
     justify-content:center;
-    display: none;
+    transform: scale(0);
+    transition: all ease-in-out 250ms;
+    z-index: 5;
 }
 .contact{
-    width: 40%;
-    height: 95%;
-    background-color: rgb(29, 29, 29);
+    max-width: 60vw;
+    min-width: 40vw;
+    max-height: 100%;
+    padding: 4em;
+    position: relative;
+    background-color: white;
+    color: white;
+    border-radius: 20px;
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
+    justify-content:center;
+    background: rgb(16,59,78);
+
     &__cv{
+        height: 100%;
         flex:2;
+        text-align: center;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: left;
+        justify-content: center;
+        transform: rotate(30deg);
+        text-transform: uppercase;
+    }
+    &__cv-heading{
+        font-size: 1.8rem;
+        margin-left: -3rem;
+        
+    }
+    &__download{
+        position: relative;
+        padding-top: 0.5em;
+        font-size: 1.4rem;
+        color:#f25f5c;
+    }
+    &__btn {
+        z-index: 2;
+        position: absolute;
+        top:1em;
+        left:1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.7rem;
+        height: 1.7rem;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        border: 3px solid white;
+        border-radius:0.15em;
+    }
+
+    &__burger {
+        width: 1rem;
+        height: 0.15rem;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(27, 121, 230, 0.2);
+        transition: all .5s ease-in-out;
+        transform: rotate(-50deg);
+    }
+
+    &__burger::before{
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 0.15rem;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    }
+
+    &__burger::before {
+        transform: rotate(90deg);
+    }
+    &__btn:hover &__burger{
+        transform: rotate(180deg);
     }
 }
 .form{
-    height: 100%;
     flex:3;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
-    &__input,&__labe{
+    justify-content: center;
+    font-weight: bolder;
+    &__container{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+    }
+    &__heading{
+        margin-bottom: 0.5em;
+        font-size: 2rem;
+        transform: rotate(3deg);
+        text-shadow: 2px 1px 6px rgba(252, 252, 255, 0.363);
+    }
+    &__heading:hover{
+        text-shadow: 2px 1px 6px rgba(252, 252, 255, 0.363);
+    }
+    &__input,&__label{
         display: block;
+        align-items: center;
+        justify-content:center;
+        text-shadow: 2px 1px 6px rgba(252, 252, 255, 0.363);
+       
+    }
+    &__label{
+        margin-top: 1em;
+        font-size: 1.2rem;
+    }
+    &__input{
+        width: 80%;
+       
+    }
+    &__message{
+        width: 100%;
+    }
+    &__input, &__message, &__btn{
+        margin-top: 1em;
+        font-weight: 800;
+        background-color:white;
+        border: 1px solid royalblue;
+        border-radius: 10px;
+        
+        transition:transform ease-in-out 250ms,
+        box-shadow ease-in-out 250ms;
+    }
+    &__input, &__message{
+        border-bottom: 2px solid #50514f;
+        min-width: 16rem;
+        color: black;
+        padding: 10px;
+        box-shadow: 2px 2px 14px 0.2px royalblue;
+    }
+    &__input:hover, &__message:hover, &__btn:hover{
+        transform:scale(1.05);
+        box-shadow: 2px 2px 14px 10px royalblue;
+    }
+    &__input:focus, &__message:focus, &__btn:focus{
+        transform:scale(1.05);
+        box-shadow: 2px 2px 14px 10px royalblue;
+    }
+    &__btn{
+        color: white;
+        border: 1px solid #51b3dd ;
+        background-color: #247ba0;
+        box-shadow: none;
+        min-width: 10rem;
+        width: 30%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 4px royalblue;
+        padding:0.4em;
+        margin: 2em auto;
+        cursor: pointer;
+        
     }
 }
