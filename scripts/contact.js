@@ -19,6 +19,31 @@ function closeContact(){
     body.style.overflowX = 'hidden';
 }
 
+function getMailData(e){
+    e.preventDefault();
+    const sender = document.querySelector('input[name=email]');
+    const subject = document.querySelector('input[name=temat]');
+    const content = document.querySelector('textarea[name=content]');
+
+    sendMail(sender.value, subject.value, content.value);
+    sender.value = '';
+    subject.value ='';
+    content.value ='';
+}
+
+function sendMail(sender, subject, content){
+    Email.send({
+        SecureToken : "5ab51c26-2955-4ff7-b759-e2afcc9149cd",
+        To : 'kontakt@adamrychert.pl',
+        From : `${sender}`,
+        Subject : `${subject}`,
+        Body : `${content}`
+    }).then(
+    message => alert("wyslano pomyslnie")
+    );
+}
+
+form.addEventListener('submit', getMailData);
 contactBtn.addEventListener('click', openContact);
 closeBtn.addEventListener('click', closeContact);
 form.addEventListener('submit', closeContact);

@@ -12,6 +12,8 @@ function toggleOpen(){
     },30);
     menuOpn = true;
 }
+
+
 function toggleClosed(){
     if(document.body.clientWidth<427){
     window.setTimeout(function() {
