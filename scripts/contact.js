@@ -35,9 +35,9 @@ function sendMail(sender, subject, content){
     Email.send({
         SecureToken : "5ab51c26-2955-4ff7-b759-e2afcc9149cd",
         To : 'kontakt@adamrychert.pl',
-        From : `${sender}`,
+        From : 'kontakt@adamrychert.pl',
         Subject : `${subject}`,
-        Body : `${content}`
+        Body : `Author e-mail:${sender}:\n    Tresc wiadmosci => ${content}`
     }).then(
     message => alert("wyslano pomyslnie")
     );
