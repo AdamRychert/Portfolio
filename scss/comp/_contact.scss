@@ -10,40 +10,33 @@
     z-index: 5;
 }
 .contact{
-    max-width: 60vw;
-    min-width: 40vw;
-    max-height: 100%;
-    padding: 4em;
     position: relative;
     background-color: white;
     color: white;
     border-radius: 20px;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content:center;
     background: rgb(16,59,78);
+    max-height: 85vh;
+    max-width: 60vw;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr 0.25fr;
 
     &__cv{
-        height: 100%;
-        flex:2;
-        text-align: center;
-        display: flex;
-        flex-flow: column wrap;
-        align-content: left;
-        justify-content: center;
         transform: rotate(30deg);
         text-transform: uppercase;
+        grid-row: 1/span 3;
+        grid-column: 3/(span)5;
+        text-align: center;
+        height: 10rem;
     }
     &__cv-heading{
         font-size: 1.8rem;
-        margin-left: -3rem;
-        
+        cursor: default;
+      
     }
     &__download{
         position: relative;
-        padding-top: 0.5em;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         color:#f25f5c;
     }
     &__btn {
@@ -90,18 +83,14 @@
     }
 }
 .form{
-    flex:3;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
     font-weight: bolder;
-    &__container{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-evenly;
+        grid-row: 2/span 3;
+        grid-column: 2/(span)4;
+    &>*{
+        padding-top: 1em;
     }
     &__heading{
-        margin-bottom: 0.5em;
+        cursor: default;
         font-size: 2rem;
         transform: rotate(3deg);
         text-shadow: 2px 1px 6px rgba(252, 252, 255, 0.363);
@@ -111,35 +100,30 @@
     }
     &__input,&__label{
         display: block;
-        align-items: center;
-        justify-content:center;
         text-shadow: 2px 1px 6px rgba(252, 252, 255, 0.363);
        
     }
     &__label{
-        margin-top: 1em;
         font-size: 1.2rem;
     }
     &__input{
-        width: 80%;
-       
+        max-width: 60%;
+        min-width: 45%;
     }
     &__message{
-        width: 100%;
+        width: 80%;
     }
     &__input, &__message, &__btn{
-        margin-top: 1em;
         font-weight: 800;
         background-color:white;
         border: 1px solid royalblue;
         border-radius: 10px;
-        
         transition:transform ease-in-out 250ms,
         box-shadow ease-in-out 250ms;
     }
     &__input, &__message{
         border-bottom: 2px solid #50514f;
-        min-width: 16rem;
+        margin-top: 0.7em;
         color: black;
         padding: 10px;
         box-shadow: 2px 2px 14px 0.2px royalblue;
@@ -158,12 +142,11 @@
         background-color: #247ba0;
         box-shadow: none;
         min-width: 10rem;
-        width: 30%;
+        max-width:12rem ;
         text-transform: uppercase;
         text-shadow: 1px 1px 4px royalblue;
         padding:0.4em;
-        margin: 2em auto;
         cursor: pointer;
-        
+        margin: 1em auto;
     }
 }

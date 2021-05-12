@@ -18,5 +18,16 @@
             grid-column: 4/6;
         }
     }
+    
+    .contact{
+        min-width: 95vw;
+        max-height: 100vh;
+        &__cv{
+            grid-row: 3/span 5;
+            grid-column: 3/ 5;
+            
+        }
+    }
+   
    
 }
