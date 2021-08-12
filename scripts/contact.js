@@ -26,9 +26,7 @@ function getMailData(e){
     const content = document.querySelector('textarea[name=content]');
 
     sendMail(sender.value, subject.value, content.value);
-    sender.value = '';
-    subject.value ='';
-    content.value ='';
+    this.reset();
 }
 
 function sendMail(sender, subject, content){
@@ -36,8 +34,8 @@ function sendMail(sender, subject, content){
         SecureToken : "5ab51c26-2955-4ff7-b759-e2afcc9149cd",
         To : 'kontakt@adamrychert.pl',
         From : 'kontakt@adamrychert.pl',
-        Subject : `${subject}`,
-        Body : `Author e-mail:${sender}:\n    Tresc wiadmosci => ${content}`
+        Subject : `<${sender}> ${subject}`,
+        Body : `Author: ${sender} <br><br> ${content}`
     }).then(
     message => alert("wyslano pomyslnie")
     );

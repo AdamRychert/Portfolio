@@ -2,7 +2,9 @@
     height: 5rem;
     width: 100%;
     font-size: 1.2rem;
-    &__quote{
+    position: relative;
+    background-color: royalblue;
+    &__quote {
         display: none;
     }
     &__list {
@@ -12,26 +14,36 @@
         padding-top: 5vh;
         height: auto;
     }
-    &__item{
+    &__item {
         transition: transform ease-in-out 500ms;
         position: relative;
         cursor: pointer;
-        &::after{
-            content:'';
+        color: white;
+        //fix html names for css !!!!!!
+        a {
+            color: white;
+        }
+        &:hover {
+            text-shadow: 0.1rem 0.1rem black;
+            transform: translateY(-0.25rem);
+        }
+        &::after {
+            content: '';
             display: block;
             width: 100%;
             height: 0.12rem;
             transform: scaleX(0);
             transition: transform ease-in-out 250ms;
         }
-        &:hover::after{
+        &:hover::after {
             transform: scaleX(1);
-            background-color: chartreuse;
+            // background-color: white;
         }
     }
-
-    &__item:hover{
-        text-shadow: 0.1rem 0.1rem $fColorG;
-        transform: translateY(-0.25rem);
+    //LANGUAGE SELECTION
+    select {
+        position: absolute;
+        top: 10%;
+        right: 1em;
     }
 }
