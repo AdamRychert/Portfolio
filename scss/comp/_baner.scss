@@ -1,14 +1,11 @@
-.baner{
-    height: 100%;
+.baner {
     display: flex;
     justify-content: center;
     margin-top: 10vh;
-    
-    &__img{
-        max-width:90vw;
-        min-width: 80vw;
+    &__img {
+        max-height: 90vh;
+        max-width: 90%;
         border-bottom: 0.1rem solid $fColorG;
         padding: 0 10vw;
     }
-    
 }

@@ -1,34 +1,46 @@
-@media (max-width: 768px) { 
-    html{
+@media (max-width: 768px) {
+    html {
         font-size: 11px;
     }
-    .school-list{
-        &__item{
+    .school-list {
+        &__item {
             display: grid;
             place-items: left;
             height: 100%;
-            border:none;
-            &:hover{
+            border: none;
+            &:hover {
                 background-color: transparent;
             }
         }
-        &__content{
+        &__content {
             width: 100%;
             padding: 1em;
             border-bottom: 2px solid rgb(0, 247, 123);
-            transition:background-color ease-in-out 1s;
-            &:hover{
-                background-color: rgba(#23CE6B,0.6);
+            transition: background-color ease-in-out 1s;
+            &:hover {
+                background-color: rgba(#23CE6B, 0.6);
             }
         }
-        &__logo{
-            flex:none;
+        &__logo {
+            flex: none;
             height: 5em;
         }
-        &__logo2{
-            flex:none;
+        &__logo2 {
+            flex: none;
             height: 5em;
         }
     }
-   
+    .site-header {
+        flex-flow: column wrap;
+        margin-bottom: 10vh;
+        height: auto;
+        &__img {
+            order: 3;
+            max-height: 60vh;
+            margin-top: 5vh;
+        }
+        .headings {
+            order: 2;
+        }
+    }
 }

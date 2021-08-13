@@ -1,5 +1,5 @@
-@media (max-width: 426px) {  
-    .nav{
+@media (max-width: 426px) {
+    .nav {
         display: flex;
         position: fixed;
         flex-flow: row wrap;
@@ -8,56 +8,56 @@
         z-index: 800;
         background-color: royalblue;
         max-height: 14vw;
-        &__quote{
-            display:flex;
+        &__quote {
+            display: flex;
             font-size: 0.7em;
             position: relative;
             width: 70vw;
             transform: rotate(-2deg);
             color: white;
             font-weight: 800;
-            &::after{
+            &::after {
                 content: "Albert Einstein";
+                color: $fColorG;
                 transform: translateY(1.2rem) translateX(-5rem) rotate(5deg);
             }
         }
-        &__list{
+        &__list {
             display: none;
-            position:absolute;
-            flex-flow:column nowrap;
+            position: absolute;
+            flex-flow: column nowrap;
             align-items: center;
             height: auto;
-            top:14vw;
+            top: 14vw;
             padding: 0;
         }
-        &__item{
+        &__item {
             width: 100vw;
             text-align: center;
             padding: 0.7em;
             transition: all ease-in-out 1s;
             transform: translateX(-100%);
             opacity: 0;
-            &:hover{
+            &:hover {
                 transform: scale(1.2);
             }
         }
-        &__item:nth-child(1){
+        &__item:nth-child(1) {
             background-color: #29A0B1;
         }
-        &__item:nth-child(2){
+        &__item:nth-child(2) {
             background-color: #167D7F;
         }
-        &__item:nth-child(3){
+        &__item:nth-child(3) {
             background-color: #98D7C2;
         }
-        &__item:nth-child(4){
+        &__item:nth-child(4) {
             background-color: #DDFFE7;
         }
-        &__item.item-open{
+        &__item.item-open {
             transform: translateX(0);
             opacity: 1;
         }
-       
         &__btn {
             z-index: 2;
             position: relative;
@@ -70,7 +70,6 @@
             transition: all .5s ease-in-out;
             border: 2px solid white;
         }
-    
         &__burger {
             width: 0.9rem;
             height: 0.12rem;
@@ -79,7 +78,6 @@
             box-shadow: 0 2px 5px rgba(27, 121, 230, 0.2);
             transition: all .5s ease-in-out;
         }
-    
         &__burger::before,
         &__burger::after {
             content: '';
@@ -90,77 +88,72 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
         }
-    
         &__burger::before {
             transform: translateY(-0.3rem);
         }
-    
         &__burger::after {
             transform: translateY(0.3rem);
         }
-    
         &__btn.open &__burger {
             transform: translateX(-0.3rem);
             background: transparent;
             box-shadow: none;
         }
-    
-        &__btn.open
-        &__burger::before {
+        &__btn.open &__burger::before {
             transform: rotate(45deg) translate(0.2rem, -0.2rem);
         }
-    
-        &__btn.open
-        &__burger::after {
+        &__btn.open &__burger::after {
             transform: rotate(-45deg) translate(0.2rem, 0.2rem);
         }
-
     }
-    .headings{
+    .headings {
         margin-top: 12vh;
         font-size: 0.8rem;
-        &__h1{
+        &__h1 {
             grid-column: 2/(span)5;
         }
-        &__h2{
-        
+        &__h2 {
             grid-column: 2/5;
         }
-        &__autor{
+        &__autor {
             grid-column: 2/5;
         }
     }
-    .arrow{
+    .arrow {
         display: none;
     }
-    .contact{
+    .contact {
         position: relative;
-        &__cv{
+        &__cv {
             margin-top: 1em;
             transform: rotate(-10deg);
             position: absolute;
             bottom: -3em;
             width: 17rem
-            
         }
     }
-   
+    .site-header {
+        &__img {
+            max-height: 45vh;
+            margin-top: 5vh;
+        }
+    }
 }
 
-@media (max-height: 450px){
-    html{
-        font-size:10px;
+@media (max-height: 450px) {
+    html {
+        font-size: 10px;
     }
-    .contact{
+    .contact {
         border-radius: 0;
         min-width: 100vw;
-        &__cv{
+        &__cv {
             transform: rotate(30deg);
             grid-row: 3/span 5;
             grid-column: 3/ 5;
         }
     }
-    .form{
+    .form {
         grid-row: 1/span 3;
         grid-column: 2/(span)4;
     }
