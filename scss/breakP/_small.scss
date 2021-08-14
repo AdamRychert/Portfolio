@@ -32,15 +32,22 @@
     }
     .site-header {
         flex-flow: column wrap;
+        margin-top: 0;
+        padding-top: 0;
         margin-bottom: 10vh;
         height: auto;
         &__img {
             order: 3;
             max-height: 60vh;
-            margin-top: 5vh;
+            // margin-top: 5vh;
         }
         .headings {
             order: 2;
+        }
+    }
+    .baner {
+        &__img {
+            padding: 0;
         }
     }
 }
