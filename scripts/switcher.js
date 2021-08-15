@@ -1,5 +1,5 @@
 const Strings = [{
-        currentLang: "PL",
+        currentLang: "pl",
         // nav: document.querySelectorAll('[data-ttt-nav]'),
         // headers: document.querySelectorAll('[data-ttt-headings]'),
         components: [
@@ -13,7 +13,7 @@ const Strings = [{
         ]
     },
     {
-        lang: "PL",
+        lang: "pl",
         components: [
                 ["PROJEKTY", "WYKSZTAŁCENIE", "KONTAKT", "O MNIE"],
                 ["ROZWIJAJĄCY SIĘ PROGRAMISTA", "STUDENT INFORMATYKI"],
@@ -30,7 +30,7 @@ const Strings = [{
             // headers: ["ROZWIJAJĄCY SIĘ PROGRAMISTA", "STUDENT INFORMATYKI"]
     },
     {
-        lang: "ENG",
+        lang: "eng",
         components: [
                 ["PROJECTS", "EDUCATION", "CONTACT", "ABOUT ME"],
                 ["ASPIRING PROGRAMMER", "COMPUTER SCIENCE STUDENT"],
@@ -51,14 +51,14 @@ const Strings = [{
 ]
 
 function switcher(e) {
-    const selectedLang = e.srcElement.innerText; //eng or pl  -> variable with selected language (option) from 'select' element
+    const selectedLang = e.target.value; //eng or pl  -> variable with selected language (option) from 'select' element
 
     const source = Strings[0];
     const plStr = Strings[1];
     const engStr = Strings[2];
 
     //changing language
-    if (selectedLang == "ENG") {
+    if (selectedLang == "eng") {
 
         let j = 0;
         for (let component of source.components) { //through all elements of components table
@@ -68,14 +68,14 @@ function switcher(e) {
             ++j;
         }
         // change of lang in main object
-        source.currentLang = "ENG";
+        source.currentLang = "eng";
         //change of lang attr for html element
         document.documentElement.setAttribute('lang', 'eng');
         return 0;
     }
 
     //checking if lang needs to be changed from eng to pl
-    if (source.currentLang == "ENG") {
+    if (source.currentLang == "eng") {
         let j = 0;
         for (let component of source.components) {
             for (let i = 0; i < component.length; ++i) {
@@ -83,13 +83,14 @@ function switcher(e) {
             }
             ++j;
         }
-        source.currentLang = "PL";
+        source.currentLang = "pl";
         //set the website lang
         document.documentElement.setAttribute('lang', 'pl');
     }
 
 }
 
-const langSwitch = document.querySelectorAll('option');
-//looking for click on option
-langSwitch.forEach(option => option.addEventListener('click', switcher));
+// const langSwitch = document.querySelectorAll('option');
+// //looking for click on option
+// langSwitch.forEach(option => option.addEventListener('click', switcher));
+document.querySelector('select').addEventListener('change', switcher);
